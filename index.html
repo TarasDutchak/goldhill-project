@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDHILL</title>
+    <link rel="apple-touch-icon-precomposed" href="favico/favicon-goldhill-32x32.svg" />
+    <link rel="icon" href="favico/favicon-goldhill-16x16.svg">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Чому ми</a></li>
+                <li><a href="#">Котеджі</a></li>
+                <li><a href="#">ЧАСТІ ЗАПИТАННЯ</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="header__rightsect">
+            <div class="header__lang">
+                <span>
+                    UA
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.16664 8.33333C4.16626 8.13862 4.23407 7.94993 4.3583 7.8C4.42826 7.71562 4.51418 7.64587 4.61113 7.59474C4.70809 7.54361 4.81418 7.51212 4.92333 7.50205C5.03247 7.49199 5.14253 7.50356 5.2472 7.5361C5.35187 7.56863 5.4491 7.6215 5.5333 7.69167L9.99997 11.425L14.475 7.825C14.5602 7.75578 14.6583 7.70409 14.7636 7.67289C14.8689 7.6417 14.9793 7.63162 15.0885 7.64324C15.1976 7.65485 15.3035 7.68794 15.3998 7.74058C15.4962 7.79323 15.5812 7.8644 15.65 7.95C15.7258 8.03622 15.7831 8.13719 15.818 8.24658C15.853 8.35597 15.865 8.4714 15.8533 8.58565C15.8416 8.69989 15.8063 8.81048 15.7498 8.91046C15.6933 9.01045 15.6168 9.09767 15.525 9.16667L10.525 13.1917C10.3759 13.3142 10.1888 13.3812 9.9958 13.3812C9.80278 13.3812 9.61575 13.3142 9.46663 13.1917L4.46664 9.025C4.36579 8.9414 4.28607 8.83521 4.23394 8.71503C4.18182 8.59486 4.15876 8.46409 4.16664 8.33333Z"
+                            fill="#1A1A1A" />
+                    </svg>
+                </span>
+                <ul>
+                    <li><a href="#">EN</a></li>
+                    <li><a href="#">RU</a></li>
+                </ul>
+            </div>
+            <a href="tel:+3800000000" class="header__tel">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.75 6C10.3467 6 10.919 6.23705 11.341 6.65901C11.7629 7.08097 12 7.65326 12 8.25C12 8.44891 12.079 8.63968 12.2197 8.78033C12.3603 8.92098 12.5511 9 12.75 9C12.9489 9 13.1397 8.92098 13.2803 8.78033C13.421 8.63968 13.5 8.44891 13.5 8.25C13.5 7.25544 13.1049 6.30161 12.4017 5.59835C11.6984 4.89509 10.7446 4.5 9.75 4.5C9.55109 4.5 9.36032 4.57902 9.21967 4.71967C9.07902 4.86032 9 5.05109 9 5.25C9 5.44891 9.07902 5.63968 9.21967 5.78033C9.36032 5.92098 9.55109 6 9.75 6Z"
+                        fill="#272727" />
+                    <path
+                        d="M9.75 3C11.1424 3 12.4777 3.55312 13.4623 4.53769C14.4469 5.52226 15 6.85761 15 8.25C15 8.44891 15.079 8.63968 15.2197 8.78033C15.3603 8.92098 15.5511 9 15.75 9C15.9489 9 16.1397 8.92098 16.2803 8.78033C16.421 8.63968 16.5 8.44891 16.5 8.25C16.5 6.45979 15.7888 4.7429 14.523 3.47703C13.2571 2.21116 11.5402 1.5 9.75 1.5C9.55109 1.5 9.36032 1.57902 9.21967 1.71967C9.07902 1.86032 9 2.05109 9 2.25C9 2.44891 9.07902 2.63968 9.21967 2.78033C9.36032 2.92098 9.55109 3 9.75 3Z"
+                        fill="#272727" />
+                    <path
+                        d="M16.3125 11.9325C16.2712 11.8121 16.2 11.7042 16.1056 11.6189C16.0111 11.5336 15.8965 11.4738 15.7725 11.445L11.2725 10.4175C11.1504 10.3898 11.0232 10.3931 10.9027 10.4272C10.7822 10.4613 10.6721 10.525 10.5825 10.6125C10.4775 10.71 10.47 10.7175 9.9825 11.6475C8.3649 10.9021 7.06875 9.60064 6.33 7.98C7.2825 7.5 7.29 7.5 7.3875 7.3875C7.47503 7.29792 7.53874 7.18784 7.5728 7.06731C7.60686 6.94679 7.61019 6.81965 7.5825 6.6975L6.555 2.25C6.52623 2.12602 6.46639 2.0114 6.38111 1.91693C6.29582 1.82246 6.1879 1.75125 6.0675 1.71C5.89235 1.64744 5.71148 1.60223 5.5275 1.575C5.33794 1.53105 5.1445 1.50592 4.95 1.5C4.035 1.5 3.15748 1.86348 2.51048 2.51048C1.86348 3.15748 1.5 4.035 1.5 4.95C1.50397 8.01203 2.72211 10.9475 4.8873 13.1127C7.05248 15.2779 9.98797 16.496 13.05 16.5C13.5031 16.5 13.9517 16.4108 14.3703 16.2374C14.7888 16.064 15.1692 15.8099 15.4895 15.4895C15.8099 15.1692 16.064 14.7888 16.2374 14.3703C16.4108 13.9517 16.5 13.5031 16.5 13.05C16.5002 12.8591 16.4852 12.6685 16.455 12.48C16.4235 12.2937 16.3758 12.1105 16.3125 11.9325Z"
+                        fill="#272727" />
+                </svg>
+                +380 000 0000
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="welcomesection">
+            <div class="welcomesection__textblock">
+                <p class="welcome__title">
+                    <span>GOLDHILL</span>
+                </p>
+                <p class="welcome__subtitle">VILLAS & RESORT</p>
+                <h1 class="welcome__h1">нерухомість в карпатах</h1>
+                <div class="welcome__btns">
+                    <a href="#" class="yellow-btn">Отримати консультацію</a>
+                    <a href="#" class="transparent-btn">Презентація</a>
+                </div>
+            </div>
+            <div class="swiper welcomeslider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/mail-slide1.jpg" alt="slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/mail-slide1.jpg" alt="slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/mail-slide1.jpg" alt="slide">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/mail-slide1.jpg" alt="slide">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="whyus">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h3>Чому ми?</h3>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="descr">
+                            <h2 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="mountains-img" src="img/yellow-mountains.png" alt="img">
+        </section>
+        <section class="getpresentation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <h3>
+                            Отримайте презентацію
+                            GOLDHILL
+                        </h3>
+                        <div class="descr">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit ame
+                            </p>
+                        </div>
+                        <form action="#" class="littform">
+                            <input type="text" placeholder="Ім’я *">
+                            <input type="tel" class="phoneinp" placeholder="Телефон *">
+                            <div class="submbtnwrap">
+                                <input type="submit" value="Надіслати">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 alignright">
+                        <img src="img/img1.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="investition">
+            <div class="investition__wrapperbox">
+                <div class="investition__leftblock">
+                    <h3>
+                        ВАШІ<br> ІНВЕСТИЦІЇ -<br> ЦЕ
+                    </h3>
+                    <div class="descr">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                        </p>
+                    </div>
+                </div>
+                <div class="investition__rightblock">
+                    <div class="swiper investslider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img2.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img2.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img2.jpg" alt="slide">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img2.jpg" alt="slide">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="investition__bottomblock">
+                <div class="container">
+                    <div class="descr">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                            sint occaecat cupidatat non proident, sunt in
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="ourakc">
+            <div class="ourakc__wrapper">
+                <div class="ourakc__leftbox">
+                    <h3>
+                        Дізнайтеся <br>
+                        про наші акції
+                    </h3>
+                    <div class="descr">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <a href="tel:+380 000 0000" class="yellow-btn">Зателефонувати</a>
+                </div>
+                <div class="ourakc__rightbox">
+                    <div class="swiper ourakcslider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="ourakcbox">
+                                    <p class="date">до 22.03.2022</p>
+                                    <p class="title">Акція</p>
+                                    <div class="descr">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ourakcbox">
+                                    <p class="date">до 22.03.2022</p>
+                                    <p class="title">Lorem ipsum dolor sit amet.</p>
+                                    <div class="descr">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ourakcbox">
+                                    <p class="date">до 22.03.2022</p>
+                                    <p class="title">Акція</p>
+                                    <div class="descr">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="ourakcbox">
+                                    <p class="date">до 22.03.2022</p>
+                                    <p class="title">Акція</p>
+                                    <div class="descr">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cottages">
+            <div class="cottages__topsect">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <h3>
+                                Котеджі
+                            </h3>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="descr">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure
+                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim id est laborum.
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure
+                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/cottages-bg.png" alt="bg" class="abspic">
+            </div>
+            <div class="cottages__bottsect">
+                <div class="row">
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="gall-middlebox">
+                            <a href="img/gallery-img1.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img1.jpg" alt="img">
+                            </a>
+                        </div>
+                        <div class="gall-bigbox">
+                            <a href="img/gallery-img2.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img2.jpg" alt="img">
+                            </a>
+                        </div>
+                        <div class="gall-smallbox">
+                            <a href="img/gallery-img3.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img3.jpg" alt="img">
+                            </a>
+                            <a href="img/gallery-img4.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img4.jpg" alt="img">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <div class="gall-textbox">
+                            <p class="title">Lorem ipsum dolor </p>
+                            <div class="descr">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <ul>
+                                    <li>Площа ділянки: <span>0,6 Га</span></li>
+                                    <li>Площа будинку: <span>від 126 м²</span></li>
+                                    <li>Кількість поверхів: <span>2</span></li>
+                                    <li>Кімнат: <span>2</span></li>
+                                </ul>
+                                <p class="price">Ціна: 100500$</p>
+                                <div class="btnswrapp">
+                                    <a href="#" class="yellow-btn">Отримати Пропозицію</a>
+                                    <a href="#" class="link">Детальне планування</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gall-bigbox middlerow">
+                            <a href="img/gallery-img5.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img5.jpg" alt="img">
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="gall-bigbox">
+                            <a href="img/gallery-img6.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img6.jpg" alt="img">
+                            </a>
+                        </div>
+                        <div class="gall-smallbox">
+                            <a href="img/gallery-img7.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img7.jpg" alt="img">
+                            </a>
+                            <a href="img/gallery-img8.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img8.jpg" alt="img">
+                            </a>
+                        </div>
+                        <div class="gall-middlebox">
+                            <a href="img/gallery-img9.jpg" data-fancybox="gallery" tabindex="-1">
+                                <img src="img/gallery-img9.jpg" alt="img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="managementcompany">
+            <h3>
+                Як працює управляюча<br>
+                компанія
+            </h3>
+            <div class="managementcompany__content">
+                <div class="managementcompany__step">
+                    <p class="num">1</p>
+                    <p class="title">
+                        Договір<br> управління
+                    </p>
+                    <div class="descr">
+                        <p>
+                            Договір на управління<br> підписується на 5 років
+                        </p>
+                    </div>
+                </div>
+                <div class="managementcompany__step">
+                    <p class="num">2</p>
+                    <p class="title">
+                        Комунальні платежі
+                    </p>
+                    <div class="descr">
+                        <p>
+                            Ми повністю берем на себе оплату комунальних платежів:
+                        </p>
+                        <ul>
+                            <li>Електрика</li>
+                            <li>Вода</li>
+                            <li>Каналізація</li>
+                            <li>Охорона та – відеонагляд
+                            </li>
+                            <li>Інтернет
+                            </li>
+                            <li>Обслуговування території (доріг)
+                            </li>
+                            <li>Вивіз сміття</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="managementcompany__step">
+                    <p class="num">3</p>
+                    <p class="title">
+                        Управляюча компанія
+                    </p>
+                    <div class="descr">
+                        <p>
+                            Несе відповідальність за:
+                        </p>
+                        <ul>
+                            <li>Клінінг</li>
+                            <li>Ландшафтні роботи та обслуговування території
+                            </li>
+                            <li>Облаштування комунікацій
+                            </li>
+                            <li>Маркетинг та рекламу
+                            </li>
+                            <li>Готельний сервіс: пошук та поселення гостей
+                            </li>
+                            <li>Адміністрування та Reception
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="managementcompany__step">
+                    <p class="num">4</p>
+                    <p class="title">
+                        Власник апартаментів
+                    </p>
+                    <div class="descr">
+                        <p>
+                            Отримує гарантований стабільний дохід від здачі апартаментів в оренду.
+                        </p>
+                        <p>
+                            Під час дії договору управління всі витрати на ремонт бере на себе упра вляюча компанія.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="getpresentation actyv">
+            <div class="actyv__wrapper">
+                <div class="leftsect">
+                    <h3>
+                        GOLDHILL - це <br>Ваш актив
+                    </h3>
+                    <div class="descr">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <form action="#" class="littform">
+                        <input type="text" placeholder="Ім’я *">
+                        <input type="tel" class="phoneinp" placeholder="Телефон *">
+                        <div class="submbtnwrap">
+                            <input type="submit" value="Надіслати">
+                        </div>
+                    </form>
+                </div>
+                <div class="rightsect">
+                    <img src="img/img3.jpg" alt="img">
+                </div>
+            </div>
+        </section>
+        <section class="construction">
+            <div class="construction__wrapper">
+                <div class="construction__leftsect">
+                    <h3>Хід будівництва</h3>
+                    <div class="descr">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                        </p>
+                    </div>
+                    <div class="construction__sliderbtns">
+                        <p>Рік</p>
+                        <a href="#" class="active tab1 tabbtn">2022</a>
+                        <a href="#" class="tab2 tabbtn">2021</a>
+                        <p>Місяць</p>
+                        <div class="construction__year year22">
+                            <a href="#" class="active month1">Січень</a>
+                            <a href="#" class="month2">Лютий</a>
+                            <a href="#" class="month3">Березень</a>
+                            <a href="#" class="month4">Квітень</a>
+                            <a href="#" class="month5">Травень</a>
+                            <a href="#" class="month6">Червень</a>
+                        </div>
+                        <div class="construction__year year21 hide">
+                            <a href="#" class="active month7">Грудень</a>
+                            <a href="#" class="month8">Ливстопад</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="construction__rightsect">
+                    <div class="swiper constructionslider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/constructionslide1.jpg" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/constructionslide2.jpg" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/constructionslide1.jpg" alt="img">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/constructionslide2.jpg" alt="img">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="faq">
+            <div class="container">
+                <h3>Часті запитання</h3>
+                <div class="faqaccordeon">
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit ame
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit amet, consectetur
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faqaccordeon__field">
+                        <div class="faqaccordeon__header">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            <span class="plusicon"></span>
+                        </div>
+                        <div class="faqaccordeon__body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit, sed do eiusmod
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contactform">
+            <div class="container">
+                <h3>Немає Вашого запитання? <span>Напишіть нам</span></h3>
+                <form action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" placeholder="Ім’я *">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="email" placeholder="Email *">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="tel" placeholder="Телефон *" class="phoneinp">
+                        </div>
+                        <div class="col-12">
+                            <textarea placeholder="Ваше запитання *"></textarea>
+                            <input type="submit" value="Надіслати" class="yellow-btn">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <h3>Наші контакти</h3>
+                <div class="contacts__info">
+                    <div class="contacts__infobox">
+                        <p class="address">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed </p>
+                    </div>
+                    <div class="contacts__infobox">
+                        <a href="tel:+380000000000" class="tel">+38 000 000 0000</a>
+                    </div>
+                    <div class="contacts__infobox">
+                        <a href="mailto:info@email.com" class="email">info@email.com</a>
+                    </div>
+                </div>
+                <div class="mapwrapper">
+                    <a href="#" target="_blank"><img src="img/map.jpg" alt="map"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="flexwrapper">
+                <div class="footer__logosect">
+                    <a href="index.html"><img src="img/logo-footer.png" alt="logo"></a>
+                    <ul class="footer__soc">
+                        <li><a href="#" target="_blank"><img src="img/fb.svg" alt="facebook"></a></li>
+                        <li><a href="#" target="_blank"><img src="img/insta.svg" alt="instagram"></a></li>
+                    </ul>
+                </div>
+                <div class="footer__infosect">
+                    <div class="footis">
+                        <p class="title">АДРЕСА</p>
+                        <p class="descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </p>
+                    </div>
+                    <div class="footis">
+                        <p class="title">Телефон</p>
+                        <a href="tel:+380000000000" class="descr">+38 000 000 00 00</a>
+                    </div>
+                    <div class="footis">
+                        <p class="title">Email</p>
+                        <a href="mailto:info@email.com" class="descr">info@email.com</a>
+                    </div>
+                </div>
+                <div class="footer__contactsect">
+                    <a href="#" class="yellow-btn">Отримати Консультацію</a>
+                    <a href="#" class="transparent-btn">Презентація</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottomline">
+            © 2022 GOLDHILL. All rights reserved.
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.inputmask.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/common.js"></script>
+
+</body>
+
+</html>
