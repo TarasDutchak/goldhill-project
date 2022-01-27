@@ -20,11 +20,20 @@
         <div class="header__logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
         <nav>
             <ul>
-                <li class="active"><a href="#">Чому ми</a></li>
-                <li><a href="#">Котеджі</a></li>
-                <li><a href="#">ЧАСТІ ЗАПИТАННЯ</a></li>
-                <li><a href="#">Контакти</a></li>
+                <li class="active"><a href="#whyus">Чому ми</a></li>
+                <li><a href="#cottages">Котеджі</a></li>
+                <li><a href="#faq">ЧАСТІ ЗАПИТАННЯ</a></li>
+                <li><a href="#contacts">Контакти</a></li>
             </ul>
+            <ul class="moblang">
+                <li><a href="#">UA</a></li>
+                <li><a href="#">RU</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+            <button class="closemenu">
+                <img src="img/close-modal.svg" alt="close">
+            </button>
+            <img src="img/cottages-bg.png" alt="img" class="menuimg">
         </nav>
         <div class="header__rightsect">
             <div class="header__lang">
@@ -56,6 +65,7 @@
                 +380 000 0000
             </a>
         </div>
+        <div class="burger-btn"><img src="img/burger.svg" alt="menu"></div>
     </header>
 
     <main class="main">
@@ -89,7 +99,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </section>
-        <section class="whyus">
+        <section class="whyus" id="whyus">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
@@ -291,7 +301,7 @@
                 </div>
             </div>
         </section>
-        <section class="cottages">
+        <section class="cottages" id="cottages">
             <div class="cottages__topsect">
                 <div class="container">
                     <div class="row">
@@ -563,7 +573,7 @@
             </div>
 
         </section>
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="container">
                 <h3>Часті запитання</h3>
                 <div class="faqaccordeon">
@@ -705,7 +715,7 @@
                 </form>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <h3>Наші контакти</h3>
                 <div class="contacts__info">

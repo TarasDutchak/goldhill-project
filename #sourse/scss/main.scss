@@ -1107,6 +1107,10 @@
     min-height: 500px;
 }
 
+.burger-btn {
+    display: none;
+}
+
 @media(max-width:1600.8px) {
 
     .welcomesection__textblock {
@@ -1579,8 +1583,15 @@
         width: 330px;
     }
 
+    .burger-btn {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+    }
 
-
+    .header__rightsect {
+        padding-right: 60px;
+    }
 
 
 
@@ -1929,8 +1940,17 @@
         padding: 0;
     }
 
+    .burger-btn {
+        right: 15px;
+    }
 
+    .header__rightsect {
+        padding-right: 50px;
+    }
 
+    .header__rightsect .header__tel {
+        padding-left: 23px;
+    }
 
 
 

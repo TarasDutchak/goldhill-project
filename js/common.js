@@ -165,17 +165,35 @@ $(document).ready(function () {
         $(this).next('.faqaccordeon__body').slideToggle();
     });
 
+    // MOBILE MENU
+    $('.burger-btn').click(function () {
+        $('.header.header nav').addClass('show');
+    })
 
+    $('.closemenu').click(function () {
+        $('.header.header nav').removeClass('show');
+    });
 
+    document.querySelectorAll('header.header nav a[href^="#"').forEach(link => {
 
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
 
+            let href = this.getAttribute('href').substring(1);
 
+            const scrollTarget = document.getElementById(href);
 
+            // const topOffset = document.querySelector('.header.header nav').offsetHeight;
+            const topOffset = 50; // если не нужен отступ сверху 
+            const elementPosition = scrollTarget.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - topOffset;
 
-
-
-
-
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
 
 
 
