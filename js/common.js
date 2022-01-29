@@ -174,7 +174,10 @@ $(document).ready(function () {
         $('.header.header nav').removeClass('show');
     });
 
-    document.querySelectorAll('header.header nav a[href^="#"').forEach(link => {
+
+
+
+    document.querySelectorAll('a.scrolltopres[href^="#"').forEach(link => {
 
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -194,6 +197,10 @@ $(document).ready(function () {
             });
         });
     });
+
+
+
+
 
 
 

@@ -77,8 +77,9 @@
                 <p class="welcome__subtitle">VILLAS & RESORT</p>
                 <h1 class="welcome__h1">нерухомість в карпатах</h1>
                 <div class="welcome__btns">
-                    <a href="#" class="yellow-btn">Отримати консультацію</a>
-                    <a href="#" class="transparent-btn">Презентація</a>
+                    <a href="#" class="yellow-btn" data-bs-toggle="modal" data-bs-target="#getcons">Отримати
+                        консультацію</a>
+                    <a href="#getpresentation" class="transparent-btn scrolltopres">Презентація</a>
                 </div>
             </div>
             <div class="swiper welcomeslider">
@@ -132,7 +133,7 @@
             </div>
             <img class="mountains-img" src="img/yellow-mountains.png" alt="img">
         </section>
-        <section class="getpresentation">
+        <section class="getpresentation" id="getpresentation">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7">
@@ -382,7 +383,8 @@
                                 </ul>
                                 <p class="price">Ціна: 100500$</p>
                                 <div class="btnswrapp">
-                                    <a href="#" class="yellow-btn">Отримати Пропозицію</a>
+                                    <a href="#" class="yellow-btn" data-bs-toggle="modal"
+                                        data-bs-target="#getcons">Отримати Пропозицію</a>
                                     <a href="#" class="link">Детальне планування</a>
                                 </div>
                             </div>
@@ -763,8 +765,9 @@
                     </div>
                 </div>
                 <div class="footer__contactsect">
-                    <a href="#" class="yellow-btn">Отримати Консультацію</a>
-                    <a href="#" class="transparent-btn">Презентація</a>
+                    <a href="#" class="yellow-btn" data-bs-toggle="modal" data-bs-target="#getcons">Отримати
+                        Консультацію</a>
+                    <a href="#getpresentation" class="transparent-btn scrolltopres">Презентація</a>
                 </div>
             </div>
         </div>
@@ -773,7 +776,31 @@
         </div>
     </footer>
 
-
+    <!-- Modal -->
+    <div class="modal fade consultationmodal" id="getcons" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" data-bs-dismiss="modal" aria-label="Close" class="closemodalbtn"><img
+                        src="img/closemodal.svg" alt="close"></button>
+                <div class="wrapper">
+                    <div class="leftsect">
+                        <p class="title">
+                            Отримати консультацію
+                        </p>
+                        <form action="#" class="modalform">
+                            <input type="text" placeholder="Ім’я *">
+                            <input type="tel" class="phoneinp" placeholder="Телефон *" inputmode="text">
+                            <div class="submbtnwrap">
+                                <input type="submit" value="Надіслати" class="yellow-btn">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="rightsect"><img src="img/modalpic.jpg" alt="img"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -798,6 +825,29 @@
     <script src="js/lib/jquery.fancybox.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
+
+    <script>
+        document.querySelectorAll('header.header nav a[href^="#"').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                let href = this.getAttribute('href').substring(1);
+
+                const scrollTarget = document.getElementById(href);
+
+                // const topOffset = document.querySelector('.header.header nav').offsetHeight;
+                const topOffset = 50; // если не нужен отступ сверху 
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 
 </body>
 
