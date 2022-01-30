@@ -177,7 +177,7 @@ $(document).ready(function () {
 
 
 
-    document.querySelectorAll('a.scrolltopres[href^="#"').forEach(link => {
+    document.querySelectorAll('a.scrolltopres').forEach(link => {
 
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -195,8 +195,44 @@ $(document).ready(function () {
                 top: offsetPosition,
                 behavior: 'smooth'
             });
+
+
+
         });
     });
+
+    if ($(window).width() < 992) {
+        $('header.header nav ul:not(.moblang) li a').click(function () {
+            $('header.header nav').removeClass('show');
+        });
+
+    }
+
+
+
+
+    if ($('#whyus').length > 0) {
+        $(function () {
+            $(document).scroll(function () {
+                if ($(this).scrollTop() >= $('#whyus').offset().top - 80) {
+                    $("header.header nav ul li").removeClass('active');
+                    $("header.header nav ul li:nth-child(1)").addClass('active');
+                }
+                if ($(this).scrollTop() >= $('#cottages').offset().top - 80) {
+                    $("header.header nav ul li").removeClass('active');
+                    $("header.header nav ul li:nth-child(2)").addClass('active');
+                }
+                if ($(this).scrollTop() >= $('#faq').offset().top - 80) {
+                    $("header.header nav ul li").removeClass('active');
+                    $("header.header nav ul li:nth-child(3)").addClass('active');
+                }
+                if ($(this).scrollTop() >= $('#contacts').offset().top - 80) {
+                    $("header.header nav ul li").removeClass('active');
+                    $("header.header nav ul li:nth-child(4)").addClass('active');
+                }
+            });
+        });
+    }
 
 
 

@@ -827,7 +827,7 @@
     <script src="js/common.js"></script>
 
     <script>
-        document.querySelectorAll('header.header nav a[href^="#"').forEach(link => {
+        document.querySelectorAll('header.header nav ul:not(.moblang) a[href^="#"').forEach(link => {
 
             link.addEventListener('click', function (e) {
                 e.preventDefault();
