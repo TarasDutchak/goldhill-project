@@ -2415,16 +2415,93 @@
 
 
 
+.cottages__wrappertabs {
+    padding-top: 120px;
+
+    .title {
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 38px;
+        margin-bottom: 46px;
+    }
+
+    .nav-tabs {
+        border: none;
+        justify-content: center;
+    }
+
+    .nav-item {
+        margin: 0 17px;
+    }
+
+    .nav-link {
+        padding: 0;
+        border: none;
+        margin: 0 !important;
+        border-radius: 0;
+        width: 270px;
+        height: 55px;
+        border: 1px solid #fff;
+        color: #fff;
+        background: transparent;
+        font-weight: 500;
+        font-size: 18px;
+
+        &.active {
+            background: rgba(255, 206, 113, 1);
+            border-color: rgba(255, 206, 113, 1);
+            color: rgba(39, 39, 39, 1);
+            font-weight: 700;
+        }
+    }
+
+    .cottages__bottsect {
+        padding-top: 80px;
+    }
 
 
+}
 
+@media(max-width:767.8px) {
 
+    .cottages__wrappertabs .nav-link {
+        width: 210px;
+    }
 
+}
 
+@media(max-width:767.8px) {
 
+    .cottages__wrappertabs .nav-link {
+        width: 150px;
+        height: 46px;
+        font-size: 16px;
+    }
 
+  
+}
 
+@media(max-width:575.8px)  {
+    .cottages__wrappertabs .nav-item {
+        margin: 0 10px;
+    }
 
+    .cottages .cottages__bottsect {
+        padding-top: 40px;
+    }
+
+    .cottages__wrappertabs .title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:360.8px) {
+    .cottages__wrappertabs .nav-link {
+        width: 140px;
+    }
+}
 
 
 
